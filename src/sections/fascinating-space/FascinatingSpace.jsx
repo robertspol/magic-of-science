@@ -10,7 +10,7 @@ const FascinatingSpace = () => {
     const picturesNumber = useRef();
 
     const handleKeyDown = (e) => {
-        if (e.key === 13 || e.key === "Enter") {
+        if (e.key == 13 || e.key === "Enter") {
             e.preventDefault();
             picturesNumber.current.blur();
         }
@@ -100,8 +100,8 @@ const FascinatingSpace = () => {
                         type="number"
                         className="fascinating-space__input"
                         onChange={handleInput}
-                        min="1"
                         onKeyDown={handleKeyDown}
+                        min="1"
                     />
 
                     {fetchedData.length === 0 ? (
