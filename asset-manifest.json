@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/magic-of-science/static/css/main.2465e2aa.css",
-    "main.js": "/magic-of-science/static/js/main.eaadd67a.js",
+    "main.js": "/magic-of-science/static/js/main.a2e1b6f7.js",
     "static/js/592.c77bcff9.chunk.js": "/magic-of-science/static/js/592.c77bcff9.chunk.js",
     "static/media/Montserrat-VariableFont_wght.ttf": "/magic-of-science/static/media/Montserrat-VariableFont_wght.7e687123cd4528224ce5.ttf",
     "static/media/Merienda-VariableFont_wght.ttf": "/magic-of-science/static/media/Merienda-VariableFont_wght.373b823211bb1d6f1f8b.ttf",
     "index.html": "/magic-of-science/index.html",
     "main.2465e2aa.css.map": "/magic-of-science/static/css/main.2465e2aa.css.map",
-    "main.eaadd67a.js.map": "/magic-of-science/static/js/main.eaadd67a.js.map",
+    "main.a2e1b6f7.js.map": "/magic-of-science/static/js/main.a2e1b6f7.js.map",
     "592.c77bcff9.chunk.js.map": "/magic-of-science/static/js/592.c77bcff9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.2465e2aa.css",
-    "static/js/main.eaadd67a.js"
+    "static/js/main.a2e1b6f7.js"
   ]
 }
