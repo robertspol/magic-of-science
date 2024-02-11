@@ -971,27 +971,6 @@ ul {
     width: 50%;
   }
 }
-.fascinating-space p {
-  margin: 2vh 0;
-  text-align: center;
-  line-height: normal;
-}
-@media (min-width: 360px) and (orientation: landscape) {
-  .fascinating-space p {
-    font-size: 1.4rem;
-    text-align: 1;
-  }
-}
-@media (min-width: 1024px) and (orientation: landscape) {
-  .fascinating-space p {
-    font-size: 1.3rem;
-  }
-}
-@media (min-width: 1200px) and (orientation: landscape) {
-  .fascinating-space p {
-    font-size: 1rem;
-  }
-}
 .fascinating-space__rocket-icon-wrapper {
   text-align: center;
 }

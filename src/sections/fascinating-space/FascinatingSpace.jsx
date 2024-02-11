@@ -184,7 +184,7 @@ const FascinatingSpace = () => {
                     </figure>
                 </li>
             ) : (
-                <li>Brak zdjęcia</li>
+                <li key={i}>Brak zdjęcia</li>
             )
         );
     };

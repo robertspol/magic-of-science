@@ -51,10 +51,6 @@
         }
     }
 
-    p {
-        @include p(center, 1);
-    }
-
     &__rocket-icon-wrapper {
         text-align: center;
 
