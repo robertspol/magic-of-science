@@ -1,0 +1,993 @@
+@font-face {
+  font-family: Merienda;
+  src: url("../fonts/Merienda/Merienda-VariableFont_wght.ttf");
+}
+@font-face {
+  font-family: Montserrat;
+  src: url("../fonts/Montserrat/Montserrat-VariableFont_wght.ttf");
+}
+@keyframes header {
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes opacity {
+  to {
+    opacity: 1;
+  }
+}
+@keyframes chart {
+  to {
+    height: 80%;
+  }
+}
+@keyframes percent {
+  to {
+    opacity: 1;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 2.5vh;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #fff;
+}
+
+section {
+  min-height: 100vh;
+}
+
+p {
+  margin: 2vh 0;
+  text-align: center;
+  line-height: normal;
+}
+@media (min-width: 360px) and (orientation: landscape) {
+  p {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+}
+@media (min-width: 1024px) and (orientation: landscape) {
+  p {
+    font-size: 1.3rem;
+  }
+}
+@media (min-width: 1200px) and (orientation: landscape) {
+  p {
+    font-size: 1rem;
+  }
+}
+
+h1 {
+  margin-bottom: 4vh;
+  color: orange;
+  font-family: Merienda;
+  font-size: 1.7rem;
+  text-align: center;
+}
+@media (min-width: 360px) and (orientation: landscape) {
+  h1 {
+    font-size: 2.2rem;
+  }
+}
+
+h2 {
+  margin: 3vh 0 2vh;
+  color: orange;
+  font-family: Merienda;
+  font-size: 1.4rem;
+  text-align: center;
+}
+@media (min-width: 360px) and (orientation: landscape) {
+  h2 {
+    font-size: 1.7rem;
+  }
+}
+
+ul {
+  list-style-type: none;
+}
+
+.homepage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 2vh;
+  min-height: 100vh;
+  background: linear-gradient(45deg, #444 0 40%, #aaa);
+}
+.homepage__header {
+  font-size: 2.4rem;
+  transform: translateY(-5vh);
+  text-transform: uppercase;
+  opacity: 0;
+  animation: header 1s forwards;
+}
+@media (min-width: 360px) and (orientation: landscape) {
+  .homepage__header {
+    font-size: 2.9rem;
+  }
+}
+.homepage__text {
+  margin-bottom: 7vh;
+  color: #0f0;
+  font-family: Merienda;
+  transform: translateY(-5vh);
+  opacity: 0;
+  animation: header 1s 0.5s forwards;
+}
+.homepage__list {
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+  list-style-type: none;
+}
+@media (min-width: 360px) and (orientation: landscape) {
+  .homepage__list {
+    flex-direction: row;
+  }
+}
+.homepage__link {
+  border-radius: 10px;
+  text-align: center;
+  transition: 0.2s;
+  opacity: 0;
+  animation: opacity 1s 1s forwards;
+}
+.homepage__link--prime-numbers {
+  background-color: #500;
+}
+.homepage__link--science-millionaires {
+  background-color: #005;
+}
+.homepage__link--fascinating-space {
+  background-color: #000;
+}
+@media (hover: hover) {
+  .homepage__link:hover {
+    box-shadow: 0 0 2vh #fff;
+  }
+}
+.homepage__link a {
+  all: initial;
+  display: inline-block;
+  padding: 2vh;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: Montserrat;
+  cursor: pointer;
+}
+@media (min-width: 640px) {
+  .homepage__link a {
+    font-size: 0.8rem;
+  }
+}
+@media (min-width: 1024px) {
+  .homepage__link a {
+    font-size: 1.2rem;
+  }
+}
+@media (min-width: 1200px) {
+  .homepage__link a {
+    font-size: 1rem;
+  }
+}
+
+.nav-bar {
+  position: fixed;
+  right: 6vh;
+  top: 0;
+  padding: 1vh;
+  border-bottom-left-radius: 3%;
+  border-bottom-right-radius: 3%;
+  transition: 0.4s;
+  z-index: 10;
+}
+@media (min-width: 360px) and (orientation: landscape) {
+  .nav-bar {
+    font-size: 1.3rem;
+  }
+}
+.nav-bar--prime-numbers {
+  background-color: #700;
+}
+.nav-bar--science-millionaires {
+  background-color: #007;
+}
+.nav-bar--fascinating-space {
+  background-color: #222;
+}
+.nav-bar__list {
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+  text-align: center;
+}
+.nav-bar__li {
+  transition: 0.2s;
+}
+@media (hover: hover) {
+  .nav-bar__li--prime-numbers:hover {
+    background-color: #f00;
+  }
+  .nav-bar__li--science-millionaires:hover {
+    background-color: #00f;
+  }
+  .nav-bar__li--fascinating-space:hover {
+    background-color: #aaa;
+  }
+}
+.nav-bar a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav-bar-icon {
+  position: fixed;
+  right: 0;
+  top: 1vh;
+  width: 6vh;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+@media (min-width: 360px) and (orientation: landscape) {
+  .nav-bar-icon {
+    font-size: 2rem;
+  }
+}
+
+.prime-numbers {
+  background-color: #500;
+}
+.prime-numbers__wrapper {
+  width: 90%;
+  margin: 0 auto;
+  padding: 5vh 0 2vh;
+}
+@media (min-width: 360px) and (orientation: landscape) {
+  .prime-numbers__wrapper {
+    padding-top: 2vh;
+  }
+}
+@media (min-width: 1920px) and (orientation: landscape) {
+  .prime-numbers__wrapper {
+    width: 60%;
+  }
+}
+.prime-numbers__info p {
+  margin: 2vh 0;
+  text-align: justify;
+  line-height: 1.4;
+}
+@media (min-width: 360px) and (orientation: landscape) {
+  .prime-numbers__info p {
+    font-size: 1.4rem;
+    text-align: left;
+  }
+}
+@media (min-width: 1024px) and (orientation: landscape) {
+  .prime-numbers__info p {
+    font-size: 1.3rem;
+  }
+}
+@media (min-width: 1200px) and (orientation: landscape) {
+  .prime-numbers__info p {
+    font-size: 1rem;
+  }
+}
+.prime-numbers__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2vh;
+  margin-bottom: 2vh;
+}
+.prime-numbers__input {
+  width: auto;
+  padding: 0.2vh 0.8vh;
+  background-color: #555;
+  color: #fff;
+  font-size: 1rem;
+  border: 0.5vh solid #00f;
+  border-radius: 2vh;
+  text-align: center;
+  outline: none;
+}
+@media (min-width: 360px) and (orientation: landscape) {
+  .prime-numbers__input {
+    width: auto;
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 1200px) and (orientation: landscape) {
+  .prime-numbers__input {
+    font-size: 1.2rem;
+  }
+}
+.prime-numbers__input::-moz-placeholder {
+  color: #fff;
+  text-align: center;
+}
+.prime-numbers__input::placeholder {
+  color: #fff;
+  text-align: center;
+}
+.prime-numbers__btn {
+  all: unset;
+  padding: 0.7vh 2vh;
+  font-size: 0.8rem;
+  border-radius: 2vh;
+  transition: 0.2s;
+  cursor: pointer;
+}
+@media (min-width: 360px) and (orientation: landscape) {
+  .prime-numbers__btn {
+    font-size: 1.3rem;
+  }
+}
+@media (min-width: 1200px) and (orientation: landscape) {
+  .prime-numbers__btn {
+    font-size: 1rem;
+  }
+}
+.prime-numbers__btn--count {
+  background-color: #0a0;
+}
+@media (hover: hover) {
+  .prime-numbers__btn--count:hover {
+    background-color: #0f0;
+  }
+}
+.prime-numbers__btn--clear {
+  background-color: #a00;
+}
+@media (hover: hover) {
+  .prime-numbers__btn--clear:hover {
+    background-color: #f00;
+  }
+}
+.prime-numbers__numbers-wrapper {
+  margin-bottom: 2vh;
+  padding: 1vh;
+  background-color: #333;
+  border-radius: 1vh;
+}
+.prime-numbers__number {
+  display: inline-block;
+  margin-right: 1vh;
+}
+.prime-numbers__length {
+  text-align: center;
+}
+
+.science-millionaires-intro {
+  background-color: #005;
+  text-align: center;
+}
+.science-millionaires-intro__wrapper {
+  width: 90%;
+  margin: 0 auto;
+  padding: 5vh 0 2vh;
+}
+@media (min-width: 360px) and (orientation: landscape) {
+  .science-millionaires-intro__wrapper {
+    padding-top: 2vh;
+  }
+}
+.science-millionaires-intro__wrapper p {
+  margin: 2vh 0;
+  text-align: justify;
+  line-height: normal;
+}
+@media (min-width: 360px) and (orientation: landscape) {
+  .science-millionaires-intro__wrapper p {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+}
+@media (min-width: 1024px) and (orientation: landscape) {
+  .science-millionaires-intro__wrapper p {
+    font-size: 1.3rem;
+  }
+}
+@media (min-width: 1200px) and (orientation: landscape) {
+  .science-millionaires-intro__wrapper p {
+    font-size: 1rem;
+  }
+}
+.science-millionaires-intro__rules {
+  margin-top: 2vh;
+}
+.science-millionaires-intro__start {
+  all: unset;
+  display: inline-block;
+  margin-top: 2vh;
+  padding: 0.7vh 2vh;
+  background-color: #ff4500;
+  font-size: 1rem;
+  border-radius: 2vh;
+  transition: 0.2s;
+  cursor: pointer;
+}
+@media (min-width: 360px) and (orientation: landscape) {
+  .science-millionaires-intro__start {
+    margin-top: 2vh;
+    margin-top: 5vh;
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 1024px) and (orientation: landscape) {
+  .science-millionaires-intro__start {
+    font-size: 1.1rem;
+  }
+}
+@media (hover: hover) {
+  .science-millionaires-intro__start:hover {
+    background-color: #ffa500;
+  }
+}
+
+.science-millionaires {
+  min-height: 100vh;
+  padding-top: 2vh;
+  background-color: #005;
+}
+.science-millionaires__start-over {
+  all: unset;
+  margin: 0 0 2vh 2vh;
+  padding: 0.5vh;
+  color: yellow;
+  border: 0.4vh solid yellow;
+  border-radius: 1vh;
+  cursor: pointer;
+}
+@media (min-width: 360px) and (orientation: landscape) {
+  .science-millionaires__start-over {
+    margin-bottom: 0;
+    font-size: 1.2rem;
+  }
+}
+@media (min-width: 1024px) {
+  .science-millionaires__start-over {
+    font-size: 1rem;
+  }
+}
+.science-millionaires__wrapper {
+  max-width: 98%;
+  margin: 0 auto;
+}
+@media (min-width: 1024px) {
+  .science-millionaires__wrapper {
+    width: 70%;
+  }
+}
+@media (min-width: 360px) and (orientation: landscape) {
+  .science-millionaires__wrapper {
+    width: 70%;
+  }
+}
+.science-millionaires__qa-wrapper p {
+  margin-bottom: 2vh;
+  color: yellow;
+  font-family: Merienda;
+  font-size: 1.2rem;
+  text-align: center;
+}
+@media (min-width: 360px) and (orientation: landscape) {
+  .science-millionaires__qa-wrapper p {
+    font-size: 1.7rem;
+  }
+}
+@media (min-width: 1024px) and (orientation: landscape) {
+  .science-millionaires__qa-wrapper p {
+    font-size: 1.5rem;
+  }
+}
+.science-millionaires__question, .science-millionaires__answer {
+  margin-bottom: 1vh;
+  padding: 0.5vh;
+  font-size: 0.9rem;
+  border-radius: 3vh;
+  text-align: center;
+}
+@media (min-width: 360px) and (orientation: landscape) {
+  .science-millionaires__question, .science-millionaires__answer {
+    font-size: 1.5rem;
+    padding: 1.5vh;
+  }
+}
+@media (min-width: 1024px) and (orientation: landscape) {
+  .science-millionaires__question, .science-millionaires__answer {
+    font-size: 1.3rem;
+    padding: 1.5vh;
+  }
+}
+@media (min-width: 1200px) and (orientation: landscape) {
+  .science-millionaires__question, .science-millionaires__answer {
+    font-size: 1rem;
+    padding: 1.5vh;
+  }
+}
+.science-millionaires__question {
+  background-color: #008;
+}
+.science-millionaires__answers-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.science-millionaires__answers-wrapper .science-millionaires__letter {
+  color: orange;
+  margin: 0 0.5vh;
+}
+.science-millionaires__answers-wrapper .correct {
+  background-color: #0f0;
+}
+.science-millionaires__answers-wrapper .incorrect {
+  background-color: #f00;
+}
+.science-millionaires__answer {
+  display: flex;
+  align-items: center;
+  width: 49.5%;
+  min-height: 5vh;
+  background-color: #00a;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+.science-millionaires__lifelines-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 2vh;
+  margin: 2vh 0;
+}
+.science-millionaires__lifeline {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 23vw;
+  height: 15vw;
+  background-color: #009;
+  font-weight: bold;
+  border: 0.5vh solid #fff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+@media (min-width: 360px) and (orientation: landscape) {
+  .science-millionaires__lifeline {
+    width: 11vw;
+    height: 8vw;
+  }
+}
+@media (min-width: 1200px) and (orientation: landscape) {
+  .science-millionaires__lifeline {
+    width: 9vw;
+    height: 6vw;
+  }
+}
+.science-millionaires__lifeline--fifty-fifty {
+  font-size: 3.3vh;
+}
+@media (min-width: 640px) {
+  .science-millionaires__lifeline--fifty-fifty {
+    font-size: 5vh;
+  }
+}
+@media (min-width: 360px) and (orientation: landscape) {
+  .science-millionaires__lifeline--fifty-fifty {
+    font-size: 6vh;
+  }
+}
+@media (min-width: 800px) and (orientation: landscape) {
+  .science-millionaires__lifeline--fifty-fifty {
+    font-size: 7vh;
+  }
+}
+@media (min-width: 1024px) and (orientation: landscape) {
+  .science-millionaires__lifeline--fifty-fifty {
+    font-size: 4.5vh;
+  }
+}
+@media (min-width: 1200px) and (orientation: landscape) {
+  .science-millionaires__lifeline--fifty-fifty {
+    font-size: 6vh;
+  }
+}
+.science-millionaires__lifeline--phone {
+  font-size: 4.5vh;
+}
+@media (min-width: 460px) {
+  .science-millionaires__lifeline--phone {
+    font-size: 6vh;
+  }
+}
+@media (min-width: 640px) {
+  .science-millionaires__lifeline--phone {
+    font-size: 7vh;
+  }
+}
+@media (min-width: 800px) {
+  .science-millionaires__lifeline--phone {
+    font-size: 6.5vh;
+  }
+}
+@media (min-width: 360px) and (orientation: landscape) {
+  .science-millionaires__lifeline--phone {
+    font-size: 9vh;
+  }
+}
+@media (min-width: 640px) and (orientation: landscape) {
+  .science-millionaires__lifeline--phone {
+    font-size: 7vh;
+  }
+}
+@media (min-width: 800px) and (orientation: landscape) {
+  .science-millionaires__lifeline--phone {
+    font-size: 10vh;
+  }
+}
+@media (min-width: 1024px) and (orientation: landscape) {
+  .science-millionaires__lifeline--phone {
+    font-size: 6.5vh;
+  }
+}
+@media (min-width: 1200px) and (orientation: landscape) {
+  .science-millionaires__lifeline--phone {
+    font-size: 7.5vh;
+  }
+}
+.science-millionaires__audience-body1 {
+  transform: translate(8%, -8%);
+}
+.science-millionaires__audience-body2 {
+  transform: translateY(8%);
+}
+.science-millionaires__audience-body3 {
+  transform: translate(-8%, -8%);
+}
+.science-millionaires__audience-head {
+  width: 3vw;
+  height: 3vw;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 50%;
+  transform: translateY(10%);
+}
+@media (min-width: 460px) {
+  .science-millionaires__audience-head {
+    width: 2vw;
+    height: 2vw;
+  }
+}
+@media (min-width: 640px) {
+  .science-millionaires__audience-head {
+    width: 3vw;
+    height: 3vw;
+  }
+}
+@media (min-width: 360px) and (orientation: landscape) {
+  .science-millionaires__audience-head {
+    width: 1.3vw;
+    height: 1.3vw;
+  }
+}
+.science-millionaires__audience-neck {
+  width: 0;
+  height: 0;
+  border-left: 2.75vw solid transparent;
+  border-right: 2.75vw solid transparent;
+  border-bottom: 2vw solid #fff;
+}
+@media (min-width: 460px) {
+  .science-millionaires__audience-neck {
+    border-left: 2.5vw solid transparent;
+    border-right: 2.5vw solid transparent;
+    border-bottom: 1vw solid #fff;
+  }
+}
+@media (min-width: 640px) {
+  .science-millionaires__audience-neck {
+    border-left: 2.5vw solid transparent;
+    border-right: 2.5vw solid transparent;
+    border-bottom: 1.3vw solid #fff;
+  }
+}
+@media (min-width: 360px) and (orientation: landscape) {
+  .science-millionaires__audience-neck {
+    border-left: 1.25vw solid transparent;
+    border-right: 1.25vw solid transparent;
+    border-bottom: 1vw solid #fff;
+  }
+}
+@media (min-width: 1200px) and (orientation: landscape) {
+  .science-millionaires__audience-neck {
+    border-left: 1vw solid transparent;
+    border-right: 1vw solid transparent;
+    border-bottom: 0.7vw solid #fff;
+  }
+}
+.science-millionaires__audience-corps {
+  width: 5.5vw;
+  height: 3.5vw;
+  background-color: #fff;
+}
+@media (min-width: 460px) {
+  .science-millionaires__audience-corps {
+    width: 2.5vw;
+    height: 1.5vw;
+  }
+}
+@media (min-width: 460px) {
+  .science-millionaires__audience-corps {
+    width: 5vw;
+    height: 3vw;
+  }
+}
+@media (min-width: 360px) and (orientation: landscape) {
+  .science-millionaires__audience-corps {
+    width: 2.5vw;
+    height: 1.5vw;
+  }
+}
+@media (min-width: 1200px) and (orientation: landscape) {
+  .science-millionaires__audience-corps {
+    width: 2vw;
+    height: 1vw;
+  }
+}
+.science-millionaires__lifeline--used {
+  border-color: #f00;
+}
+.science-millionaires__lifeline-text {
+  margin-top: 2vh;
+  text-align: center;
+}
+@media (min-width: 360px) and (orientation: landscape) {
+  .science-millionaires__lifeline-text {
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 1024px) and (orientation: landscape) {
+  .science-millionaires__lifeline-text {
+    font-size: 1rem;
+  }
+}
+.science-millionaires__phone-reply {
+  margin-top: 2vh;
+  color: orange;
+  text-align: center;
+}
+.science-millionaires__chart {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-end;
+  height: 20vh;
+  margin-top: 2vh;
+  background-color: #008;
+}
+@media (min-width: 360px) and (orientation: landscape) {
+  .science-millionaires__chart {
+    width: 30%;
+    margin: 2vh auto;
+  }
+}
+.science-millionaires__bar-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+  width: 12%;
+  height: 0;
+  animation: chart 0.7s forwards;
+}
+.science-millionaires__bar {
+  position: relative;
+  background-color: #999;
+  border-top-left-radius: 0.5vh;
+  border-top-right-radius: 0.5vh;
+}
+.science-millionaires__percent {
+  position: absolute;
+  left: 50%;
+  top: -3.1vh;
+  transform: translateX(-50%);
+  opacity: 0;
+  animation: percent 0.7s 0.3s forwards;
+}
+@media (min-width: 360px) and (orientation: landscape) {
+  .science-millionaires__percent {
+    top: -4vh;
+    font-size: 1.4rem;
+  }
+}
+.science-millionaires__vote-letter {
+  position: absolute;
+  left: 50%;
+  bottom: -4.3vh;
+  transform: translateX(-50%);
+  font-size: 1.3rem;
+  font-weight: 900;
+}
+@media (min-width: 360px) and (orientation: landscape) {
+  .science-millionaires__vote-letter {
+    bottom: -5vh;
+    font-size: 1.5rem;
+  }
+}
+.science-millionaires__verdict {
+  text-align: center;
+}
+.science-millionaires__verdict p {
+  margin: 5vh 0 2vh;
+  text-align: center;
+}
+@media (min-width: 360px) and (orientation: landscape) {
+  .science-millionaires__verdict p {
+    margin: 7vh 0 4vh;
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 1024px) and (orientation: landscape) {
+  .science-millionaires__verdict p {
+    font-size: 1rem;
+  }
+}
+.science-millionaires__btn-after {
+  all: unset;
+  padding: 0.7vh 2vh;
+  background-color: #ff4500;
+  font-size: 0.8rem;
+  border-radius: 2vh;
+  transition: 0.2s;
+  cursor: pointer;
+}
+@media (min-width: 360px) and (orientation: landscape) {
+  .science-millionaires__btn-after {
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 1024px) and (orientation: landscape) {
+  .science-millionaires__btn-after {
+    font-size: 1rem;
+  }
+}
+@media (hover: hover) {
+  .science-millionaires__btn-after:hover {
+    background-color: #ffa500;
+  }
+}
+
+.fascinating-space {
+  background-color: #000;
+}
+.fascinating-space__wrapper {
+  width: 90%;
+  margin: 0 auto;
+  padding: 5vh 0 2vh;
+}
+@media (min-width: 360px) and (orientation: landscape) {
+  .fascinating-space__wrapper {
+    padding-top: 2vh;
+  }
+}
+.fascinating-space__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2vh;
+  margin-bottom: 2vh;
+}
+.fascinating-space__input {
+  width: 10vh;
+  padding: 0.2vh 0.8vh;
+  background-color: #555;
+  color: #fff;
+  font-size: 1rem;
+  border: 0.5vh solid #f00;
+  border-radius: 2vh;
+  text-align: center;
+  outline: none;
+}
+@media (min-width: 360px) and (orientation: landscape) {
+  .fascinating-space__input {
+    width: 10vh;
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 1200px) and (orientation: landscape) {
+  .fascinating-space__input {
+    font-size: 1.2rem;
+  }
+}
+.fascinating-space__input::-moz-placeholder {
+  color: #fff;
+  text-align: center;
+}
+.fascinating-space__input::placeholder {
+  color: #fff;
+  text-align: center;
+}
+.fascinating-space__reload-btn {
+  all: unset;
+  padding: 0.7vh 2vh;
+  font-size: 0.8rem;
+  border-radius: 2vh;
+  transition: 0.2s;
+  cursor: pointer;
+  background-color: #00a;
+}
+@media (min-width: 360px) and (orientation: landscape) {
+  .fascinating-space__reload-btn {
+    font-size: 1.3rem;
+  }
+}
+@media (min-width: 1200px) and (orientation: landscape) {
+  .fascinating-space__reload-btn {
+    font-size: 1rem;
+  }
+}
+@media (hover: hover) {
+  .fascinating-space__reload-btn:hover {
+    background-color: #00f;
+  }
+}
+.fascinating-space__pictures-list {
+  text-align: center;
+}
+.fascinating-space figure {
+  margin: 2vh 0 3vh;
+}
+.fascinating-space__img-title {
+  color: #ff0;
+  font-family: Merienda;
+}
+.fascinating-space__img {
+  width: 100%;
+  border-radius: 5px;
+}
+@media (min-width: 360px) and (orientation: landscape) {
+  .fascinating-space__img {
+    width: 50%;
+  }
+}
+.fascinating-space p {
+  margin: 2vh 0;
+  text-align: center;
+  line-height: normal;
+}
+@media (min-width: 360px) and (orientation: landscape) {
+  .fascinating-space p {
+    font-size: 1.4rem;
+    text-align: 1;
+  }
+}
+@media (min-width: 1024px) and (orientation: landscape) {
+  .fascinating-space p {
+    font-size: 1.3rem;
+  }
+}
+@media (min-width: 1200px) and (orientation: landscape) {
+  .fascinating-space p {
+    font-size: 1rem;
+  }
+}
+.fascinating-space__rocket-icon-wrapper {
+  text-align: center;
+}
+.fascinating-space__rocket-icon-wrapper .fa-beat-fade {
+  color: silver;
+  font-size: 5rem;
+  cursor: pointer;
+}/*# sourceMappingURL=index.css.map */

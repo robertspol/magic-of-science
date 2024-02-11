@@ -1,0 +1,89 @@
+.homepage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 2vh;
+    min-height: 100vh;
+    background: linear-gradient(45deg, #444 0 40%, #aaa);
+
+    &__header {
+        font-size: 2.4rem;
+        transform: translateY(-5vh);
+        text-transform: uppercase;
+        opacity: 0;
+        animation: header 1s forwards;
+
+        @include mq(xxsmall-landscape) {
+            font-size: 2.9rem;
+        }
+    }
+
+    &__text {
+        margin-bottom: 7vh;
+        color: #0f0;
+        font-family: Merienda;
+        transform: translateY(-5vh);
+        opacity: 0;
+        animation: header 1s 0.5s forwards;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 2vh;
+        list-style-type: none;
+
+        @include mq(xxsmall-landscape) {
+            flex-direction: row;
+        }
+    }
+
+    &__link {
+        border-radius: 10px;
+        text-align: center;
+        transition: 0.2s;
+        opacity: 0;
+        animation: opacity 1s 1s forwards;
+
+        &--prime-numbers {
+            background-color: #500;
+        }
+
+        &--science-millionaires {
+            background-color: #005;
+        }
+
+        &--fascinating-space {
+            background-color: #000;
+        }
+
+        @media (hover: hover) {
+            &:hover {
+                box-shadow: 0 0 2vh #fff;
+            }
+        }
+
+        a {
+            all: initial;
+            display: inline-block;
+            padding: 2vh;
+            color: #fff;
+            text-transform: uppercase;
+            font-family: Montserrat;
+            cursor: pointer;
+
+            @include mq(small) {
+                font-size: 0.8rem;
+            }
+
+            @include mq(large) {
+                font-size: 1.2rem;
+            }
+
+            @include mq(xlarge) {
+                font-size: 1rem;
+            }
+        }
+    }
+}

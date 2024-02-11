@@ -1,0 +1,466 @@
+.science-millionaires-intro {
+    background-color: #005;
+    text-align: center;
+
+    &__wrapper {
+        @include wrapper;
+
+        p {
+            @include p(justify, center);
+        }
+    }
+
+    &__rules {
+        margin-top: $margin;
+    }
+
+    &__start {
+        all: unset;
+        display: inline-block;
+        margin-top: $margin;
+        padding: 0.7vh 2vh;
+        background-color: #ff4500;
+        font-size: 1rem;
+        border-radius: 2vh;
+        transition: 0.2s;
+        cursor: pointer;
+
+        @include mq(xxsmall-landscape) {
+            margin-top: $margin;
+            margin-top: 5vh;
+            font-size: 1.5rem;
+        }
+
+        @include mq(large-landscape) {
+            font-size: 1.1rem;
+        }
+
+        @media (hover: hover) {
+            &:hover {
+                background-color: #ffa500;
+            }
+        }
+    }
+}
+
+.science-millionaires {
+    min-height: 100vh;
+    padding-top: 2vh;
+    background-color: #005;
+
+    &__start-over {
+        all: unset;
+        margin: 0 0 2vh 2vh;
+        padding: 0.5vh;
+        color: yellow;
+        border: 0.4vh solid yellow;
+        border-radius: 1vh;
+        cursor: pointer;
+
+        @include mq(xxsmall-landscape) {
+            margin-bottom: 0;
+            font-size: 1.2rem;
+        }
+
+        @include mq(large) {
+            font-size: 1rem;
+        }
+    }
+
+    &__wrapper {
+        max-width: 98%;
+        margin: 0 auto;
+
+        @include mq(large) {
+            width: 70%;
+        }
+
+        @include mq(xxsmall-landscape) {
+            width: 70%;
+        }
+    }
+
+    &__qa-wrapper {
+        p {
+            margin-bottom: $margin;
+            color: yellow;
+            font-family: Merienda;
+            font-size: 1.2rem;
+            text-align: center;
+
+            @include mq(xxsmall-landscape) {
+                font-size: 1.7rem;
+            }
+
+            @include mq(large-landscape) {
+                font-size: 1.5rem;
+            }
+        }
+    }
+
+    &__question,
+    &__answer {
+        margin-bottom: 1vh;
+        padding: 0.5vh;
+        font-size: 0.9rem;
+        border-radius: 3vh;
+        text-align: center;
+
+        @include mq(xxsmall-landscape) {
+            font-size: 1.5rem;
+            padding: 1.5vh;
+        }
+
+        @include mq(large-landscape) {
+            font-size: 1.3rem;
+            padding: 1.5vh;
+        }
+
+        @include mq(xlarge-landscape) {
+            font-size: 1rem;
+            padding: 1.5vh;
+        }
+    }
+
+    &__question {
+        background-color: #008;
+    }
+
+    &__answers-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        .science-millionaires__letter {
+            color: orange;
+            margin: 0 0.5vh;
+        }
+
+        .correct {
+            background-color: #0f0;
+        }
+
+        .incorrect {
+            background-color: #f00;
+        }
+    }
+
+    &__answer {
+        display: flex;
+        align-items: center;
+        width: 49.5%;
+        min-height: 5vh;
+        background-color: #00a;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+    }
+
+    &__lifelines-wrapper {
+        display: flex;
+        justify-content: center;
+        gap: 2vh;
+        margin: $margin 0;
+    }
+
+    &__lifeline {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 23vw;
+        height: 15vw;
+        background-color: #009;
+        font-weight: bold;
+        border: 0.5vh solid #fff;
+        border-radius: 50%;
+        cursor: pointer;
+
+        @include mq(xxsmall-landscape) {
+            width: 11vw;
+            height: 8vw;
+        }
+
+        @include mq(xlarge-landscape) {
+            width: 9vw;
+            height: 6vw;
+        }
+
+        &--fifty-fifty {
+            font-size: 3.3vh;
+
+            @include mq(small) {
+                font-size: 5vh;
+            }
+
+            @include mq(xxsmall-landscape) {
+                font-size: 6vh;
+            }
+
+            @include mq(medium-landscape) {
+                font-size: 7vh;
+            }
+
+            @include mq(large-landscape) {
+                font-size: 4.5vh;
+            }
+
+            @include mq(xlarge-landscape) {
+                font-size: 6vh;
+            }
+        }
+
+        &--phone {
+            font-size: 4.5vh;
+
+            @include mq(xsmall) {
+                font-size: 6vh;
+            }
+
+            @include mq(small) {
+                font-size: 7vh;
+            }
+
+            @include mq(medium) {
+                font-size: 6.5vh;
+            }
+
+            @include mq(xxsmall-landscape) {
+                font-size: 9vh;
+            }
+
+            @include mq(small-landscape) {
+                font-size: 7vh;
+            }
+
+            @include mq(medium-landscape) {
+                font-size: 10vh;
+            }
+
+            @include mq(large-landscape) {
+                font-size: 6.5vh;
+            }
+
+            @include mq(xlarge-landscape) {
+                font-size: 7.5vh;
+            }
+        }
+    }
+
+    &__audience-body1 {
+        transform: translate(8%, -8%);
+    }
+
+    &__audience-body2 {
+        transform: translateY(8%);
+    }
+
+    &__audience-body3 {
+        transform: translate(-8%, -8%);
+    }
+
+    &__audience-head {
+        width: 3vw;
+        height: 3vw;
+        margin: 0 auto;
+        background-color: #fff;
+        border-radius: 50%;
+        transform: translateY(10%);
+
+        @include mq(xsmall) {
+            width: 2vw;
+            height: 2vw;
+        }
+
+        @include mq(small) {
+            width: 3vw;
+            height: 3vw;
+        }
+
+        @include mq(xxsmall-landscape) {
+            width: 1.3vw;
+            height: 1.3vw;
+        }
+    }
+
+    &__audience-neck {
+        width: 0;
+        height: 0;
+        border-left: 2.75vw solid transparent;
+        border-right: 2.75vw solid transparent;
+        border-bottom: 2vw solid #fff;
+
+        @include mq(xsmall) {
+            border-left: 2.5vw solid transparent;
+            border-right: 2.5vw solid transparent;
+            border-bottom: 1vw solid #fff;
+        }
+
+        @include mq(small) {
+            border-left: 2.5vw solid transparent;
+            border-right: 2.5vw solid transparent;
+            border-bottom: 1.3vw solid #fff;
+        }
+
+        @include mq(xxsmall-landscape) {
+            border-left: 1.25vw solid transparent;
+            border-right: 1.25vw solid transparent;
+            border-bottom: 1vw solid #fff;
+        }
+
+        @include mq(xlarge-landscape) {
+            border-left: 1vw solid transparent;
+            border-right: 1vw solid transparent;
+            border-bottom: 0.7vw solid #fff;
+        }
+    }
+
+    &__audience-corps {
+        width: 5.5vw;
+        height: 3.5vw;
+        background-color: #fff;
+
+        @include mq(xsmall) {
+            width: 2.5vw;
+            height: 1.5vw;
+        }
+
+        @include mq(xsmall) {
+            width: 5vw;
+            height: 3vw;
+        }
+
+        @include mq(xxsmall-landscape) {
+            width: 2.5vw;
+            height: 1.5vw;
+        }
+
+        @include mq(xlarge-landscape) {
+            width: 2vw;
+            height: 1vw;
+        }
+    }
+
+    &__lifeline--used {
+        border-color: #f00;
+    }
+
+    &__lifeline-text {
+        margin-top: $margin;
+        text-align: center;
+
+        @include mq(xxsmall-landscape) {
+            font-size: 1.5rem;
+        }
+
+        @include mq(large-landscape) {
+            font-size: 1rem;
+        }
+    }
+
+    &__phone-reply {
+        margin-top: $margin;
+        color: orange;
+        text-align: center;
+    }
+
+    &__chart {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: flex-end;
+        height: 20vh;
+        margin-top: $margin;
+        background-color: #008;
+
+        @include mq(xxsmall-landscape) {
+            width: 30%;
+            margin: $margin auto;
+        }
+    }
+
+    &__bar-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        position: relative;
+        width: 12%;
+        height: 0;
+        animation: chart 0.7s forwards;
+    }
+
+    &__bar {
+        position: relative;
+        background-color: #999;
+        border-top-left-radius: 0.5vh;
+        border-top-right-radius: 0.5vh;
+    }
+
+    &__percent {
+        position: absolute;
+        left: 50%;
+        top: -3.1vh;
+        transform: translateX(-50%);
+        opacity: 0;
+        animation: percent 0.7s 0.3s forwards;
+
+        @include mq(xxsmall-landscape) {
+            top: -4vh;
+            font-size: 1.4rem;
+        }
+    }
+
+    &__vote-letter {
+        position: absolute;
+        left: 50%;
+        bottom: -4.3vh;
+        transform: translateX(-50%);
+        font-size: 1.3rem;
+        font-weight: 900;
+
+        @include mq(xxsmall-landscape) {
+            bottom: -5vh;
+            font-size: 1.5rem;
+        }
+    }
+
+    &__verdict {
+        text-align: center;
+
+        p {
+            margin: 5vh 0 $margin;
+            text-align: center;
+
+            @include mq(xxsmall-landscape) {
+                margin: 7vh 0 4vh;
+                font-size: 1.5rem;
+            }
+
+            @include mq(large-landscape) {
+                font-size: 1rem;
+            }
+        }
+    }
+
+    &__btn-after {
+        all: unset;
+        padding: 0.7vh 2vh;
+        background-color: #ff4500;
+        font-size: 0.8rem;
+        border-radius: 2vh;
+        transition: 0.2s;
+        cursor: pointer;
+
+        @include mq(xxsmall-landscape) {
+            font-size: 1.5rem;
+        }
+
+        @include mq(large-landscape) {
+            font-size: 1rem;
+        }
+
+        @media (hover: hover) {
+            &:hover {
+                background-color: #ffa500;
+            }
+        }
+    }
+}

@@ -1,0 +1,120 @@
+@font-face {
+    font-family: Merienda;
+    src: url("../fonts/Merienda/Merienda-VariableFont_wght.ttf");
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url("../fonts/Montserrat/Montserrat-VariableFont_wght.ttf");
+}
+
+$margin: 2vh;
+
+@mixin wrapper {
+    width: 90%;
+    margin: 0 auto;
+    padding: 5vh 0 2vh;
+
+    @include mq(xxsmall-landscape) {
+        padding-top: 2vh;
+    }
+}
+
+@mixin p(
+    $text-align-portrait: center,
+    $text-align-landscape: center,
+    $line-height: normal
+) {
+    margin: $margin 0;
+    text-align: $text-align-portrait;
+    line-height: $line-height;
+
+    @include mq(xxsmall-landscape) {
+        font-size: 1.4rem;
+        text-align: $text-align-landscape;
+    }
+
+    @include mq(large-landscape) {
+        font-size: 1.3rem;
+    }
+
+    @include mq(xlarge-landscape) {
+        font-size: 1rem;
+    }
+}
+
+@mixin form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2vh;
+    margin-bottom: $margin;
+}
+
+@mixin input($border-color, $width-portrait: auto, $width-landscape: auto) {
+    width: $width-portrait;
+    padding: 0.2vh 0.8vh;
+    background-color: #555;
+    color: #fff;
+    font-size: 1rem;
+    border: 0.5vh solid $border-color;
+    border-radius: 2vh;
+    text-align: center;
+    outline: none;
+
+    @include mq(xxsmall-landscape) {
+        width: $width-landscape;
+        font-size: 1.5rem;
+    }
+
+    @include mq(xlarge-landscape) {
+        font-size: 1.2rem;
+    }
+
+    &::placeholder {
+        color: #fff;
+        text-align: center;
+    }
+}
+
+@mixin btn {
+    all: unset;
+    padding: 0.7vh 2vh;
+    font-size: 0.8rem;
+    border-radius: 2vh;
+    transition: 0.2s;
+    cursor: pointer;
+
+    @include mq(xxsmall-landscape) {
+        font-size: 1.3rem;
+    }
+
+    @include mq(xlarge-landscape) {
+        font-size: 1rem;
+    }
+}
+
+@keyframes header {
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes opacity {
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes chart {
+    to {
+        height: 80%;
+    }
+}
+
+@keyframes percent {
+    to {
+        opacity: 1;
+    }
+}

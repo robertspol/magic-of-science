@@ -1,0 +1,62 @@
+.fascinating-space {
+    background-color: #000;
+
+    &__wrapper {
+        @include wrapper;
+    }
+
+    &__form {
+        @include form;
+    }
+
+    &__input {
+        @include input(#f00, 10vh, 10vh);
+    }
+
+    &__reload-btn {
+        @include btn;
+        background-color: #00a;
+
+        @media (hover: hover) {
+            &:hover {
+                background-color: #00f;
+            }
+        }
+    }
+
+    &__pictures-list {
+        text-align: center;
+    }
+
+    figure {
+        margin: 2vh 0 3vh;
+    }
+
+    &__img-title {
+        color: #ff0;
+        font-family: Merienda;
+    }
+
+    &__img {
+        width: 100%;
+        border-radius: 5px;
+
+        @include mq(xxsmall-landscape) {
+            width: 50%;
+        }
+    }
+
+    p {
+        @include p(center, 1);
+    }
+
+    &__rocket-icon-wrapper {
+        text-align: center;
+
+        .fa-beat-fade {
+            color: silver;
+            font-size: 5rem;
+            cursor: pointer;
+        }
+    }
+}

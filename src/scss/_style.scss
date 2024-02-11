@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 2.5vh;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+}
+
+section {
+    min-height: 100vh;
+}
+
+p {
+    @include p;
+}
+
+h1 {
+    margin-bottom: 4vh;
+    color: orange;
+    font-family: Merienda;
+    font-size: 1.7rem;
+    text-align: center;
+
+    @include mq(xxsmall-landscape) {
+        font-size: 2.2rem;
+    }
+}
+
+h2 {
+    margin: 3vh 0 $margin;
+    color: orange;
+    font-family: Merienda;
+    font-size: 1.4rem;
+    text-align: center;
+
+    @include mq(xxsmall-landscape) {
+        font-size: 1.7rem;
+    }
+}
+
+ul {
+    list-style-type: none;
+}

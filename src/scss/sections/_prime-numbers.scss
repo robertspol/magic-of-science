@@ -1,0 +1,65 @@
+.prime-numbers {
+    background-color: #500;
+
+    &__wrapper {
+        @include wrapper;
+
+        @include mq(xxxlarge-landscape) {
+            width: 60%;
+        }
+    }
+
+    &__info {
+        p {
+            @include p(justify, left, 1.4);
+        }
+    }
+
+    &__form {
+        @include form;
+    }
+
+    &__input {
+        @include input(#00f);
+    }
+
+    &__btn {
+        @include btn;
+
+        &--count {
+            background-color: #0a0;
+
+            @media (hover: hover) {
+                &:hover {
+                    background-color: #0f0;
+                }
+            }
+        }
+
+        &--clear {
+            background-color: #a00;
+
+            @media (hover: hover) {
+                &:hover {
+                    background-color: #f00;
+                }
+            }
+        }
+    }
+
+    &__numbers-wrapper {
+        margin-bottom: $margin;
+        padding: 1vh;
+        background-color: #333;
+        border-radius: 1vh;
+    }
+
+    &__number {
+        display: inline-block;
+        margin-right: 1vh;
+    }
+
+    &__length {
+        text-align: center;
+    }
+}
