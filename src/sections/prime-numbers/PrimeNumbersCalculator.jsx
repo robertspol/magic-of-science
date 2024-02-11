@@ -4,10 +4,16 @@ const PrimeNumbersCalculator = () => {
     const [inputNumber, setInputNumber] = useState("");
     const [primeNumbers, setPrimeNumbers] = useState([]);
     const [primeNumbersLength, setPrimeNumbersLength] = useState("");
+    const [firstUpdate, setFirstUpdate] = useState(true);
 
     const scrollToBottomDiv = useRef();
 
     useEffect(() => {
+        if (firstUpdate) {
+            setFirstUpdate(false);
+            return;
+        }
+
         scrollToBottomDiv.current.scrollIntoView({ behavior: "smooth" });
     }, [primeNumbers]);
 
