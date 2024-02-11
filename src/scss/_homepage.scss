@@ -84,6 +84,10 @@
             @include mq(xlarge) {
                 font-size: 1rem;
             }
+
+            @include mq(xxsmall-landscape) {
+                font-size: 1.2rem;
+            }
         }
     }
 }

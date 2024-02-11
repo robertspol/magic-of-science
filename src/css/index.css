@@ -183,6 +183,11 @@ ul {
     font-size: 1rem;
   }
 }
+@media (min-width: 360px) and (orientation: landscape) {
+  .homepage__link a {
+    font-size: 1.2rem;
+  }
+}
 
 .nav-bar {
   position: fixed;
@@ -948,6 +953,10 @@ ul {
 }
 .fascinating-space figure {
   margin: 2vh 0 3vh;
+  border-top: 0.3vh solid #fff;
+}
+.fascinating-space figure:nth-last-child(1) {
+  margin-bottom: 0;
 }
 .fascinating-space__img-title {
   color: #ff0;

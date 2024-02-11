@@ -30,6 +30,11 @@
 
     figure {
         margin: 2vh 0 3vh;
+        border-top: 0.3vh solid #fff;
+
+        &:nth-last-child(1) {
+            margin-bottom: 0;
+        }
     }
 
     &__img-title {
