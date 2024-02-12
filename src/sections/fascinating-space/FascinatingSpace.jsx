@@ -28,6 +28,11 @@ const FascinatingSpace = () => {
             return;
         }
 
+        if (inputNumber > 50) {
+            alert("Możesz pobrać jednocześnie 50 zdjęć.");
+            return;
+        }
+
         const url = `https://api.nasa.gov/planetary/apod?count=${inputNumber}&api_key=XM5v3W8bOnlG7AVUY1UXNC34P5yQeDUCMQ94hkvx
         `;
 
@@ -102,6 +107,7 @@ const FascinatingSpace = () => {
                         onChange={handleInput}
                         onKeyDown={handleKeyDown}
                         min="1"
+                        max="50"
                     />
 
                     {fetchedData.length === 0 ? (
