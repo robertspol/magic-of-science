@@ -18,6 +18,7 @@ Zawiera ciekawostki o liczbach pierwszych oraz algorytm wypisujący je.
 Gra bazująca na znanym teleturnieju. Oto zasady:
 - Aby zostać Milionerem Nauki należy odpowiedzieć na 10 pytań z dziedzin związanych z nauką
 - Skorzystać możesz z 3 kół ratunkowych, z których każdego użyć można tylko 1 raz. Poniżej opis każdego z nich.
+  
 Pół na pół
 Usunięte zostają dwie błędne odpowiedzi i pozostają jedna prawidłowa i jedna błędna.
 
