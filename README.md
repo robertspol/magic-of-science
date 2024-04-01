@@ -19,19 +19,13 @@ Gra bazująca na znanym teleturnieju. Oto zasady:
 - Aby zostać Milionerem Nauki należy odpowiedzieć na 10 pytań z dziedzin związanych z nauką
 - Skorzystać możesz z 3 kół ratunkowych, z których każdego użyć można tylko 1 raz. Poniżej opis każdego z nich.
   
-Pół na pół
+Pół na pół - usunięte zostają dwie błędne odpowiedzi i pozostają jedna prawidłowa i jedna błędna.
 
-Usunięte zostają dwie błędne odpowiedzi i pozostają jedna prawidłowa i jedna błędna.
+Telefon do przyjaciela - wykonany zostaje telefon do wyznaczonej przed programem osoby z nadzieją, że zna odpowiedź na pytanie...
 
-Telefon do przyjaciela
-
-Wykonany zostaje telefon do wyznaczonej przed programem osoby z nadzieją, że zna odpowiedź na pytanie...
-
-Pytanie do publiczności
-
-Publiczność zgromadzona na widowni głosuje na wybraną odpowiedź, po czym gracz może przeanalizować procentowy wykres głosów.
+Pytanie do publiczności - publiczność zgromadzona na widowni głosuje na wybraną odpowiedź, po czym gracz może przeanalizować procentowy wykres głosów.
 
 ### Fascynujący kosmos
 
-Generator losowych zdjęć kosmosu, które dostarczane są przez API NASA
+Generator losowych zdjęć kosmosu, które dostarczane są przez API NASA.
 
