@@ -5,7 +5,7 @@ SPA stworzone w bibliotece React składające się z 3 sekcji związanych ze św
 ## Jak zacząć
 
 Aplikacja jest dostępna online za pośrednictwem GitHub Pages pod tym adresem:
-https://robertspol.github.io/magic-of-science/prime-numbers
+https://robertspol.github.io/magic-of-science/
 
 ## Sekcje
 
