@@ -20,12 +20,15 @@ Gra bazująca na znanym teleturnieju. Oto zasady:
 - Skorzystać możesz z 3 kół ratunkowych, z których każdego użyć można tylko 1 raz. Poniżej opis każdego z nich.
   
 Pół na pół
+
 Usunięte zostają dwie błędne odpowiedzi i pozostają jedna prawidłowa i jedna błędna.
 
 Telefon do przyjaciela
+
 Wykonany zostaje telefon do wyznaczonej przed programem osoby z nadzieją, że zna odpowiedź na pytanie...
 
 Pytanie do publiczności
+
 Publiczność zgromadzona na widowni głosuje na wybraną odpowiedź, po czym gracz może przeanalizować procentowy wykres głosów.
 
 ### Fascynujący kosmos
